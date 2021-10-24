@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
+import Button from '@material-ui/core/Button';
 
 
 const SendTransaction = () => {
@@ -33,7 +34,13 @@ const SendTransaction = () => {
         <input type="text" name="destination" className="full-width" required="required"
                placeholder="Destination address"/>
         <input type="text" name="amount" className="full-width" required="required" placeholder="Amount in BNB"/>
-        <button id="btn-send-txn" type="submit">Send Transaction</button>
+
+        <Button
+            id="btn-send-txn"
+            type="submit"
+            variant="contained"
+            color="primary"
+        >Send Transaction</Button>
     </form>
     </div>
   );

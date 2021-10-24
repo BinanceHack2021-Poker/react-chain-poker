@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import Button from '@material-ui/core/Button'
 import { UserContext } from '../context/UserContext';
 import {logoutUser, web3} from '../services/magic';
 import UserInfo from "./UserInfo";
@@ -21,7 +21,10 @@ const Dashboard = () => {
     <div className="p-2">
 
       <div className="d-flex justify-content-end">
-        <Button variant="primary" onClick={handleLogOut}>
+        <Button
+            variant="contained"
+            color="primary"
+            onClick={handleLogOut}>
           Sign Out
         </Button>
       </div>

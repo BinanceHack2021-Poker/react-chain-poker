@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
-  Button,
   Form,
   FormGroup,
   FormLabel,
   FormControl,
 } from 'react-bootstrap';
 import { loginUser } from '../services/magic';
+import Button from '@material-ui/core/Button';
 
 const Authenticate = ({ setStatus }) => {
   const [email, setEmail] = useState('');
@@ -54,9 +54,9 @@ const Authenticate = ({ setStatus }) => {
         </FormGroup>
         <Button
           type="submit"
-          size="md"
-          className="d-block w-100"
-          variant="primary"
+          variant="contained"
+          color="primary"
+          fullWidth
         >
           {loading ? 'Loading...' : 'Send'}
         </Button>
