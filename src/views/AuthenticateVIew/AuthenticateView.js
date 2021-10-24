@@ -6,10 +6,10 @@ import {
   FormLabel,
   FormControl,
 } from 'react-bootstrap';
-import { loginUser } from '../services/magic';
+import { loginUser } from '../../services/magic';
 import Button from '@material-ui/core/Button';
 
-const Authenticate = ({ setStatus }) => {
+const AuthenticateView = ({ setStatus }) => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState('');
   const [error, setError] = useState(null);
@@ -65,4 +65,4 @@ const Authenticate = ({ setStatus }) => {
   );
 };
 
-export default Authenticate;
+export default AuthenticateView;

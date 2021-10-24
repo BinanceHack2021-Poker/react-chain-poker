@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '@material-ui/core/Button'
-import { UserContext } from '../context/UserContext';
-import {logoutUser, web3} from '../services/magic';
-import UserInfo from "./UserInfo";
-import SendTransaction from "./SendTransaction";
+import { UserContext } from '../../context/UserContext';
+import {logoutUser, web3} from '../../services/magic';
+import UserInfo from "./Components/UserInfo";
+import SendTransaction from "./Components/SendTransaction";
 
-const Dashboard = () => {
+const DashboardView = () => {
   const { email, web3 } = useContext(UserContext);
   const history = useHistory();
   const handleLogOut = async () => {
@@ -36,4 +36,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardView;

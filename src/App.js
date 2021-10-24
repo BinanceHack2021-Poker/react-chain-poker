@@ -8,8 +8,8 @@ import {
 import Spinner from 'react-bootstrap/Spinner';
 import { UserContext } from './context/UserContext';
 import { checkUser } from './services/magic';
-import Authenticate from './components/Authenticate';
-import Dashboard from './components/Dashboard';
+import AuthenticateView from './views/AuthenticateVIew/AuthenticateView';
+import DashboardView from './views/DashboardView/DashboardView';
 import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
@@ -45,9 +45,9 @@ const App = () => {
         {user.isLoggedIn && <Redirect to={{ pathname: '/dashboard' }} />}
         <Switch>
           <Route exact path="/">
-            <Authenticate setStatus={setUser} />
+            <AuthenticateView setStatus={setUser} />
           </Route>
-          <PrivateRoute path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/dashboard" component={DashboardView} />
         </Switch>
       </Router>
     </UserContext.Provider>
