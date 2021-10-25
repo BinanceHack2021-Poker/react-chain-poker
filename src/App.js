@@ -8,7 +8,7 @@ import {
 import Spinner from 'react-bootstrap/Spinner';
 import { UserContext } from './context/UserContext';
 import { checkUser } from './services/magic';
-import AuthenticateView from './views/AuthenticateVIew/AuthenticateView';
+import AuthenticateView from './views/AuthenticateView/AuthenticateView';
 import DashboardView from './views/DashboardView/DashboardView';
 import PrivateRoute from './components/PrivateRoute';
 
