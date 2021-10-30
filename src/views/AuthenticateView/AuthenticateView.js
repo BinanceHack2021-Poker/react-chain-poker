@@ -38,7 +38,7 @@ const AuthenticateView = ({ setStatus }) => {
   };
   return (
     <div className="w-50 p-5 mt-5 mx-auto">
-      <h1 className="h1 text-center">React Magic Form</h1>
+      <h1 className="h1 text-center">Poker on Chain</h1>
       <Form onSubmit={handleSubmit} className="p-2 my-5 mx-auto">
         <FormGroup className="mt-3" controlId="formBasicEmail">
           <FormLabel fontSize="sm">Enter Email Address</FormLabel>
