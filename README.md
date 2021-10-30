@@ -9,10 +9,4 @@ todo
 
 # Acknowledgment
 - the base is from [React Magic Link](https://github.com/sa-ma/react-magic-link-test)
-- with help of the [tutorial](https://www.binance.org/en/blog/build-user-friendly-dapps-with-binance-smart-chain-in-minutes/)
-
-[comment]: <> (metamask binance)
-
-[comment]: <> (https://academy.binance.com/ru/articles/connecting-metamask-to-binance-smart-chain)
-
-[comment]: <> (https://dev.to/jacobedawson/build-a-web3-dapp-in-react-login-with-metamask-4chp)
+- and [Poker React Project](via https://github.com/zotijs/poker-react)

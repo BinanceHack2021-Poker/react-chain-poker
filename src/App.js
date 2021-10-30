@@ -6,10 +6,10 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
-import { UserContext } from './context/UserContext';
+import { UserContext } from './contexts/UserContext';
 import { checkUser } from './services/magic';
-import AuthenticateView from './views/AuthenticateView/AuthenticateView';
-import DashboardView from './views/DashboardView/DashboardView';
+import AuthenticateView from './views/AuthenticateView';
+import AppView from './views/AppView';
 import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
@@ -42,12 +42,12 @@ const App = () => {
   return (
     <UserContext.Provider value={user}>
       <Router>
-        {user.isLoggedIn && <Redirect to={{ pathname: '/dashboard' }} />}
+        {user.isLoggedIn && <Redirect to={{ pathname: '/game' }} />}
         <Switch>
           <Route exact path="/">
             <AuthenticateView setStatus={setUser} />
           </Route>
-          <PrivateRoute path="/dashboard" component={DashboardView} />
+          <PrivateRoute path="/game" component={AppView} />
         </Switch>
       </Router>
     </UserContext.Provider>
